@@ -1,0 +1,20 @@
+{
+	"name": "perigon-agent-skills",
+	"owner": {
+		"name": "Perigon",
+		"email": "support@goperigon.com"
+	},
+	"metadata": {
+		"description": "Official Perigon agent skills for AI-powered news intelligence",
+		"version": "1.0.0"
+	},
+	"plugins": [
+		{
+			"name": "perigon-api-best-practices",
+			"description": "Best practices for building with the Perigon News Intelligence API. Use when searching news, tracking stories, summarizing content, querying Wikipedia, or working with people, companies, journalists, and sources data.",
+			"source": "./",
+			"strict": false,
+			"skills": ["./skills/perigon-api-best-practices"]
+		}
+	]
+}
