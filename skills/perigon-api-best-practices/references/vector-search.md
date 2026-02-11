@@ -16,7 +16,7 @@ Perform natural language searches using semantic relevance. Unlike keyword searc
 ### Endpoint
 
 ```
-POST https://api.goperigon.com/v1/vector/news/all
+POST https://api.perigon.io/v1/vector/news/all
 ```
 
 ### Body Parameters (JSON)
@@ -88,7 +88,7 @@ Each result includes a `score` (0.0–1.0) indicating semantic similarity, and a
 ### Example: News Vector Search
 
 ```bash
-curl -X POST "https://api.goperigon.com/v1/vector/news/all" \
+curl -X POST "https://api.perigon.io/v1/vector/news/all" \
   -H "x-api-key: $PERIGON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -105,7 +105,7 @@ curl -X POST "https://api.goperigon.com/v1/vector/news/all" \
 ### Example: News Vector Search with Complex Filter
 
 ```bash
-curl -X POST "https://api.goperigon.com/v1/vector/news/all" \
+curl -X POST "https://api.perigon.io/v1/vector/news/all" \
   -H "x-api-key: $PERIGON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -130,7 +130,7 @@ curl -X POST "https://api.goperigon.com/v1/vector/news/all" \
 ### Endpoint
 
 ```
-POST https://api.goperigon.com/v1/vector/wikipedia/all
+POST https://api.perigon.io/v1/vector/wikipedia/all
 ```
 
 ### Body Parameters (JSON)
@@ -194,7 +194,7 @@ Each result returns a **section** of a Wikipedia page, not the entire page. The 
 ### Example: Wikipedia Vector Search
 
 ```bash
-curl -X POST "https://api.goperigon.com/v1/vector/wikipedia/all" \
+curl -X POST "https://api.perigon.io/v1/vector/wikipedia/all" \
   -H "x-api-key: $PERIGON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -206,7 +206,7 @@ curl -X POST "https://api.goperigon.com/v1/vector/wikipedia/all" \
 ### Example: Wikipedia Vector Search with Filters
 
 ```bash
-curl -X POST "https://api.goperigon.com/v1/vector/wikipedia/all" \
+curl -X POST "https://api.perigon.io/v1/vector/wikipedia/all" \
   -H "x-api-key: $PERIGON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{

@@ -72,7 +72,7 @@ import time
 def get_company(symbol):
     """Cache company lookups for the session."""
     return call_perigon(
-        "https://api.goperigon.com/v1/companies/all",
+        "https://api.perigon.io/v1/companies/all",
         headers={"x-api-key": api_key},
         params={"symbol": symbol, "size": 1}
     )

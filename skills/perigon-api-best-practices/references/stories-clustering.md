@@ -5,7 +5,7 @@ Track evolving narratives and top news headlines. Returns structured clusters of
 ## Endpoint
 
 ```
-GET https://api.goperigon.com/v1/stories/all
+GET https://api.perigon.io/v1/stories/all
 ```
 
 ## How Stories Work
@@ -102,28 +102,28 @@ The stories endpoint accepts **all the same filtering parameters** as the articl
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/stories/all?sourceGroup=top100&size=10&sortBy=date"
+  "https://api.perigon.io/v1/stories/all?sourceGroup=top100&size=10&sortBy=date"
 ```
 
 ### Stories about a specific company
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/stories/all?companyName=Tesla&size=10&sortBy=date"
+  "https://api.perigon.io/v1/stories/all?companyName=Tesla&size=10&sortBy=date"
 ```
 
 ### Stories in a topic with date range
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/stories/all?topic=Cryptocurrency&from=2026-01-01&to=2026-02-01&size=20"
+  "https://api.perigon.io/v1/stories/all?topic=Cryptocurrency&from=2026-01-01&to=2026-02-01&size=20"
 ```
 
 ### Then get all articles in a story
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?clusterId=CLUSTER_ID_HERE&size=100&sortBy=date"
+  "https://api.perigon.io/v1/articles/all?clusterId=CLUSTER_ID_HERE&size=100&sortBy=date"
 ```
 
 ## When to Use This Endpoint

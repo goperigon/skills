@@ -2,7 +2,7 @@
 	"name": "perigon-agent-skills",
 	"owner": {
 		"name": "Perigon",
-		"email": "support@goperigon.com"
+		"email": "support@perigon.io"
 	},
 	"metadata": {
 		"description": "Official Perigon agent skills for AI-powered news intelligence",
@@ -15,6 +15,13 @@
 			"source": "./",
 			"strict": false,
 			"skills": ["./skills/perigon-api-best-practices"]
+		},
+		{
+			"name": "perigon-sdks",
+			"description": "Comprehensive guide for using the official Perigon SDKs (TypeScript, Python, Go). Use when installing, configuring, or writing code with any Perigon SDK.",
+			"source": "./",
+			"strict": false,
+			"skills": ["./skills/perigon-sdks"]
 		}
 	]
 }

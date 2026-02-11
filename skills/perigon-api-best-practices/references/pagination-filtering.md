@@ -11,11 +11,11 @@ All list endpoints support `page` and `size` parameters:
 ```bash
 # Page 0, 10 results (default)
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?q=AI&page=0&size=10"
+  "https://api.perigon.io/v1/articles/all?q=AI&page=0&size=10"
 
 # Page 1, 20 results
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?q=AI&page=1&size=20"
+  "https://api.perigon.io/v1/articles/all?q=AI&page=1&size=20"
 ```
 
 - `page` starts at **0** (not 1).
@@ -28,7 +28,7 @@ By default, `numResults` counts up to 10,000 for performance. Set `showNumResult
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?q=climate+change&showNumResults=true&size=1"
+  "https://api.perigon.io/v1/articles/all?q=climate+change&showNumResults=true&size=1"
 ```
 
 This is slightly slower but gives the true total. Use it when you need to display total counts or calculate total pages.
@@ -40,7 +40,7 @@ import os
 import requests
 
 api_key = os.environ["PERIGON_API_KEY"]
-base_url = "https://api.goperigon.com/v1/articles/all"
+base_url = "https://api.perigon.io/v1/articles/all"
 
 all_articles = []
 page = 0
@@ -151,7 +151,7 @@ Filters combine with AND logic (narrowing results):
 ```bash
 # Tech articles from top sources in English about AI, excluding opinions
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?\
+  "https://api.perigon.io/v1/articles/all?\
 q=artificial+intelligence&\
 category=Tech&\
 sourceGroup=top100&\

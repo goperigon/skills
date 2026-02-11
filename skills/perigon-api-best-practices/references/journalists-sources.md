@@ -11,13 +11,13 @@ Search Perigon's database of **230,000+ journalists** from around the world, ref
 ### List Endpoint
 
 ```
-GET https://api.goperigon.com/v1/journalists/all
+GET https://api.perigon.io/v1/journalists/all
 ```
 
 ### Get by ID Endpoint
 
 ```
-GET https://api.goperigon.com/v1/journalists/{id}
+GET https://api.perigon.io/v1/journalists/{id}
 ```
 
 ### List Parameters
@@ -92,19 +92,19 @@ GET https://api.goperigon.com/v1/journalists/{id}
 ```bash
 # Search journalists by name
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/journalists/all?q=AI+reporter&size=10"
+  "https://api.perigon.io/v1/journalists/all?q=AI+reporter&size=10"
 
 # Find prolific journalists
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/journalists/all?minMonthlyPosts=30&size=10"
+  "https://api.perigon.io/v1/journalists/all?minMonthlyPosts=30&size=10"
 
 # Look up by Twitter handle
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/journalists/all?twitter=kaborczyk&size=1"
+  "https://api.perigon.io/v1/journalists/all?twitter=kaborczyk&size=1"
 
 # Get journalist by ID
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/journalists/JOURNALIST_ID"
+  "https://api.perigon.io/v1/journalists/JOURNALIST_ID"
 ```
 
 ---
@@ -116,7 +116,7 @@ Search and filter **200,000+ media sources** available via Perigon. Includes pub
 ### Endpoint
 
 ```
-GET https://api.goperigon.com/v1/sources/all
+GET https://api.perigon.io/v1/sources/all
 ```
 
 ### Parameters
@@ -194,23 +194,23 @@ GET https://api.goperigon.com/v1/sources/all
 ```bash
 # Search sources by name
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/sources/all?name=New+York+Times&size=5"
+  "https://api.perigon.io/v1/sources/all?name=New+York+Times&size=5"
 
 # Browse top 100 sources
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/sources/all?sourceGroup=top100&size=100"
+  "https://api.perigon.io/v1/sources/all?sourceGroup=top100&size=100"
 
 # Find high-traffic tech sources
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/sources/all?sourceGroup=top25tech&minMonthlyVisits=1000000&size=25"
+  "https://api.perigon.io/v1/sources/all?sourceGroup=top25tech&minMonthlyVisits=1000000&size=25"
 
 # Local news sources near coordinates
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/sources/all?sourceLat=37.7749&sourceLon=-122.4194&sourceMaxDistance=50&size=20"
+  "https://api.perigon.io/v1/sources/all?sourceLat=37.7749&sourceLon=-122.4194&sourceMaxDistance=50&size=20"
 
 # Non-paywalled sources only
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/sources/all?paywall=false&sourceGroup=top100&size=50"
+  "https://api.perigon.io/v1/sources/all?paywall=false&sourceGroup=top100&size=50"
 ```
 
 ---

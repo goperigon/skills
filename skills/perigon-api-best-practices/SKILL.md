@@ -29,7 +29,7 @@ Reference these guidelines when:
 
 ## API Overview
 
-**Base URL:** `https://api.goperigon.com`
+**Base URL:** `https://api.perigon.io`
 
 | Endpoint | Method | Purpose |
 |---|---|---|

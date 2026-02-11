@@ -10,13 +10,13 @@ All Perigon API requests require authentication via an API key. Sign up at [peri
 
 ```bash
 curl -H "x-api-key: YOUR_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?q=AI"
+  "https://api.perigon.io/v1/articles/all?q=AI"
 ```
 
 ### Option 2: Query Parameter
 
 ```bash
-curl "https://api.goperigon.com/v1/articles/all?apiKey=YOUR_API_KEY&q=AI"
+curl "https://api.perigon.io/v1/articles/all?apiKey=YOUR_API_KEY&q=AI"
 ```
 
 **Prefer the header method** — it keeps your API key out of URLs, server logs, and browser history.
@@ -39,7 +39,7 @@ import requests
 api_key = os.environ["PERIGON_API_KEY"]
 
 response = requests.get(
-    "https://api.goperigon.com/v1/articles/all",
+    "https://api.perigon.io/v1/articles/all",
     headers={"x-api-key": api_key},
     params={"q": "artificial intelligence", "size": 10}
 )
@@ -52,7 +52,7 @@ data = response.json()
 const apiKey = process.env.PERIGON_API_KEY;
 
 const response = await fetch(
-  "https://api.goperigon.com/v1/articles/all?q=artificial+intelligence&size=10",
+  "https://api.perigon.io/v1/articles/all?q=artificial+intelligence&size=10",
   { headers: { "x-api-key": apiKey } }
 );
 const data = await response.json();
@@ -62,7 +62,7 @@ const data = await response.json();
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?q=AI&size=10"
+  "https://api.perigon.io/v1/articles/all?q=AI&size=10"
 ```
 
 ## Security Best Practices

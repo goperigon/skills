@@ -1,6 +1,6 @@
 # Perigon Skills
 
-[AI Agent Skills](https://skills.sh) for the [Perigon News Intelligence API](https://www.perigon.io/). Install these skills to give your AI agent expert knowledge of the Perigon API — covering news search, story tracking, AI summarization, semantic vector search, Wikipedia knowledge, and entity intelligence.
+[AI Agent Skills](https://skills.sh) for the [Perigon News Intelligence API](https://www.perigon.io/). Install these skills to give your AI agent expert knowledge of the Perigon API and official SDKs — covering news search, story tracking, AI summarization, semantic vector search, Wikipedia knowledge, entity intelligence, and idiomatic SDK usage in TypeScript, Python, and Go.
 
 ## Installation
 
@@ -47,6 +47,21 @@ A comprehensive skill that teaches your AI agent how to use every Perigon API en
 | `error-handling.md` | HTTP status codes, retry strategies, validation checklist |
 | `rate-limits.md` | Rate limit management, caching, and optimization |
 
+### `perigon-sdks`
+
+A skill that teaches your AI agent how to use the official Perigon SDKs for TypeScript, Python, and Go. Includes:
+
+- **SDK selection guide** — choose the right SDK for your runtime
+- **Quick comparison table** — installation, auth, method style, async patterns, and error types across all three SDKs
+- **Common patterns** — side-by-side examples for articles search, vector search, and error handling
+- **3 detailed SDK reference files**:
+
+| Reference | Covers |
+|---|---|
+| `typescript-sdk.md` | `@goperigon/perigon-ts` — full method reference, middleware, runtime compatibility |
+| `python-sdk.md` | `perigon` (PyPI) — sync/async methods, `var_from` gotcha, Pydantic model objects |
+| `go-sdk.md` | `perigon-go-sdk/v2` — service pattern, optional field constructors, built-in retries, middleware |
+
 ## Quick Start
 
 1. **Get a Perigon API key** at [perigon.io](https://www.perigon.io/).
@@ -89,7 +104,9 @@ The [Perigon API](https://www.perigon.io/) is a News Intelligence API that provi
 
 - [Perigon Documentation](https://perigon.io/docs)
 - [Perigon API Reference](https://www.perigon.io/reference)
-- [Perigon Go SDK](https://github.com/goperigon/perigon-go-sdk)
+- [TypeScript SDK](https://github.com/goperigon/perigon-ts)
+- [Python SDK](https://github.com/goperigon/perigon-python)
+- [Go SDK](https://github.com/goperigon/perigon-go-sdk)
 - [Skills Standard](https://agentskills.io)
 
 ## License

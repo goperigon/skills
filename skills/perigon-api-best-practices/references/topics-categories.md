@@ -5,7 +5,7 @@ Browse and search the topics taxonomy used by Perigon to classify news articles.
 ## Endpoint
 
 ```
-GET https://api.goperigon.com/v1/topics/all
+GET https://api.perigon.io/v1/topics/all
 ```
 
 ## Parameters
@@ -56,21 +56,21 @@ Note: The topics endpoint uses `total` and `data` instead of the `numResults` an
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/topics/all?size=100"
+  "https://api.perigon.io/v1/topics/all?size=100"
 ```
 
 ### Search for topics by name
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/topics/all?name=Climate&size=20"
+  "https://api.perigon.io/v1/topics/all?name=Climate&size=20"
 ```
 
 ### Filter topics by category
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/topics/all?category=Sports&size=50"
+  "https://api.perigon.io/v1/topics/all?category=Sports&size=50"
 ```
 
 ---
@@ -111,27 +111,27 @@ curl -H "x-api-key: $PERIGON_API_KEY" \
 ```bash
 # Filter articles by category
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?category=Tech&size=20"
+  "https://api.perigon.io/v1/articles/all?category=Tech&size=20"
 
 # Filter articles by topic
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?topic=Artificial+Intelligence&size=20"
+  "https://api.perigon.io/v1/articles/all?topic=Artificial+Intelligence&size=20"
 
 # Filter by Google Content Taxonomy
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?taxonomy=/Finance/Banking&size=20"
+  "https://api.perigon.io/v1/articles/all?taxonomy=/Finance/Banking&size=20"
 
 # Filter by taxonomy prefix
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?prefixTaxonomy=/Finance&size=20"
+  "https://api.perigon.io/v1/articles/all?prefixTaxonomy=/Finance&size=20"
 
 # Exclude specific categories
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?q=Apple&excludeCategory=Tech&size=20"
+  "https://api.perigon.io/v1/articles/all?q=Apple&excludeCategory=Tech&size=20"
 
 # Search uncategorized articles
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?category=none&size=20"
+  "https://api.perigon.io/v1/articles/all?category=none&size=20"
 ```
 
 ## When to Use This Endpoint

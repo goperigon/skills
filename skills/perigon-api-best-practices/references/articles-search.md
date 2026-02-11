@@ -5,7 +5,7 @@ Search and filter all news articles available via the Perigon API. Returns a lis
 ## Endpoint
 
 ```
-GET https://api.goperigon.com/v1/articles/all
+GET https://api.perigon.io/v1/articles/all
 ```
 
 ## Key Parameters
@@ -183,28 +183,28 @@ Every entity filter has an `exclude` counterpart that uses AND-exclude logic:
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?q=artificial+intelligence&size=10"
+  "https://api.perigon.io/v1/articles/all?q=artificial+intelligence&size=10"
 ```
 
 ### Filtered by topic, source group, and date range
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?q=climate+change&topic=Environment&sourceGroup=top100&from=2026-01-01&to=2026-02-01&size=20&sortBy=date"
+  "https://api.perigon.io/v1/articles/all?q=climate+change&topic=Environment&sourceGroup=top100&from=2026-01-01&to=2026-02-01&size=20&sortBy=date"
 ```
 
 ### Negative sentiment articles about a company
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?companySymbol=TSLA&negativeSentimentFrom=0.6&size=10&sortBy=date"
+  "https://api.perigon.io/v1/articles/all?companySymbol=TSLA&negativeSentimentFrom=0.6&size=10&sortBy=date"
 ```
 
 ### Articles in a specific story cluster
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/articles/all?clusterId=CLUSTER_ID_HERE&size=50&sortBy=date"
+  "https://api.perigon.io/v1/articles/all?clusterId=CLUSTER_ID_HERE&size=50&sortBy=date"
 ```
 
 ## When to Use This Endpoint

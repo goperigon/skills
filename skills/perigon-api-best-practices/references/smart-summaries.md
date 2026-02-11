@@ -5,7 +5,7 @@ Produce a single, concise AI-generated summary over the full corpus of articles 
 ## Endpoint
 
 ```
-POST https://api.goperigon.com/v1/summarize
+POST https://api.perigon.io/v1/summarize
 ```
 
 The request body is JSON. Article filters are passed as query parameters on the URL.
@@ -61,7 +61,7 @@ The summarize endpoint accepts **all the same filtering query parameters** as th
 ### Summarize recent AI news
 
 ```bash
-curl -X POST "https://api.goperigon.com/v1/summarize?q=artificial+intelligence&from=2026-02-01&sourceGroup=top100" \
+curl -X POST "https://api.perigon.io/v1/summarize?q=artificial+intelligence&from=2026-02-01&sourceGroup=top100" \
   -H "x-api-key: $PERIGON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -75,7 +75,7 @@ curl -X POST "https://api.goperigon.com/v1/summarize?q=artificial+intelligence&f
 ### Summarize company coverage with sentiment focus
 
 ```bash
-curl -X POST "https://api.goperigon.com/v1/summarize?companySymbol=AAPL&from=2026-01-15&to=2026-02-15" \
+curl -X POST "https://api.perigon.io/v1/summarize?companySymbol=AAPL&from=2026-01-15&to=2026-02-15" \
   -H "x-api-key: $PERIGON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -89,7 +89,7 @@ curl -X POST "https://api.goperigon.com/v1/summarize?companySymbol=AAPL&from=202
 ### Quick lightweight summary
 
 ```bash
-curl -X POST "https://api.goperigon.com/v1/summarize?topic=Cryptocurrency&from=2026-02-09" \
+curl -X POST "https://api.perigon.io/v1/summarize?topic=Cryptocurrency&from=2026-02-09" \
   -H "x-api-key: $PERIGON_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{

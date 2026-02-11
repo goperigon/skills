@@ -5,7 +5,7 @@ Search and filter Wikipedia pages available via the Perigon API. Returns structu
 ## Endpoint
 
 ```
-GET https://api.goperigon.com/v1/wikipedia/all
+GET https://api.perigon.io/v1/wikipedia/all
 ```
 
 ## Key Parameters
@@ -119,35 +119,35 @@ GET https://api.goperigon.com/v1/wikipedia/all
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/wikipedia/all?q=quantum+computing&size=10"
+  "https://api.perigon.io/v1/wikipedia/all?q=quantum+computing&size=10"
 ```
 
 ### Find high-traffic Wikipedia pages about a topic
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/wikipedia/all?q=machine+learning&pageviewsFrom=1000&sortBy=pageViewsDesc&size=10"
+  "https://api.perigon.io/v1/wikipedia/all?q=machine+learning&pageviewsFrom=1000&sortBy=pageViewsDesc&size=10"
 ```
 
 ### Look up a specific Wikidata entity
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/wikipedia/all?wikidataId=Q42&size=1"
+  "https://api.perigon.io/v1/wikipedia/all?wikidataId=Q42&size=1"
 ```
 
 ### Find all Wikipedia pages about people (using instance-of)
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/wikipedia/all?wikidataInstanceOfLabel=human&q=physicist&sortBy=pageViewsDesc&size=20"
+  "https://api.perigon.io/v1/wikipedia/all?wikidataInstanceOfLabel=human&q=physicist&sortBy=pageViewsDesc&size=20"
 ```
 
 ### Recently edited pages on a topic
 
 ```bash
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/wikipedia/all?q=climate+change&wikiRevisionFrom=2026-01-01&sortBy=revisionTsDesc&size=10"
+  "https://api.perigon.io/v1/wikipedia/all?q=climate+change&wikiRevisionFrom=2026-01-01&sortBy=revisionTsDesc&size=10"
 ```
 
 ## When to Use This Endpoint

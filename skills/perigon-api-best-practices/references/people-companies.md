@@ -11,7 +11,7 @@ Search Perigon's database of **650,000+ people** from around the world. People d
 ### Endpoint
 
 ```
-GET https://api.goperigon.com/v1/people/all
+GET https://api.perigon.io/v1/people/all
 ```
 
 ### Parameters
@@ -70,11 +70,11 @@ GET https://api.goperigon.com/v1/people/all
 ```bash
 # Search for a person by name
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/people/all?q=Elon+Musk&size=5"
+  "https://api.perigon.io/v1/people/all?q=Elon+Musk&size=5"
 
 # Look up by Wikidata ID
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/people/all?wikidataId=Q317521&size=1"
+  "https://api.perigon.io/v1/people/all?wikidataId=Q317521&size=1"
 ```
 
 ---
@@ -86,7 +86,7 @@ Browse and search companies tracked by Perigon. Supports filtering by name, doma
 ### Endpoint
 
 ```
-GET https://api.goperigon.com/v1/companies/all
+GET https://api.perigon.io/v1/companies/all
 ```
 
 ### Parameters
@@ -170,19 +170,19 @@ GET https://api.goperigon.com/v1/companies/all
 ```bash
 # Search for a company by name
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/companies/all?q=Tesla&size=5"
+  "https://api.perigon.io/v1/companies/all?q=Tesla&size=5"
 
 # Look up by stock symbol
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/companies/all?symbol=AAPL&size=1"
+  "https://api.perigon.io/v1/companies/all?symbol=AAPL&size=1"
 
 # Look up by domain
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/companies/all?domain=openai.com&size=1"
+  "https://api.perigon.io/v1/companies/all?domain=openai.com&size=1"
 
 # Filter by industry and country
 curl -H "x-api-key: $PERIGON_API_KEY" \
-  "https://api.goperigon.com/v1/companies/all?industry=Semiconductors&country=us&size=20"
+  "https://api.perigon.io/v1/companies/all?industry=Semiconductors&country=us&size=20"
 ```
 
 ---
