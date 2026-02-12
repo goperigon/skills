@@ -10,6 +10,8 @@ Install with the skills CLI:
 npx skills add goperigon/skills
 ```
 
+>NOTE: The `skills` CLI is not required to use the Perigon skills, but it is highly recommended since it will take care of cloning the repository, downloading the skills you're looking for, and placing them in the right directories for your AI agents to access them.
+
 This works with **20+ AI agent platforms**, including:
 
 | Platform | Notes |
