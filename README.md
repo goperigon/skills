@@ -64,7 +64,7 @@ A skill that teaches your AI agent how to use the official Perigon SDKs for Type
 
 ## Quick Start
 
-1. **Get a Perigon API key** at [perigon.io](https://www.perigon.io/).
+1. **Get a Perigon API key** at [perigon.io](https://www.perigon.io/dev).
 
 2. **Set the environment variable**:
 
