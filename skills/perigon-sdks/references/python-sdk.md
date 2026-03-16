@@ -50,6 +50,7 @@ Every method has a sync version and an `_async` variant:
 |---|---|---|---|
 | `search_articles(...)` | `search_articles_async(...)` | `GET /v1/articles/all` | Search news articles |
 | `search_stories(...)` | `search_stories_async(...)` | `GET /v1/stories/all` | Search clustered stories |
+| `get_story_history(...)` | `get_story_history_async(...)` | `GET /v1/stories/history` | Get story evolution history |
 | `search_summarizer(...)` | `search_summarizer_async(...)` | `POST /v1/summarize` | AI-powered summarization |
 | `vector_search_articles(...)` | `vector_search_articles_async(...)` | `POST /v1/vector/news/all` | Semantic news search |
 | `search_wikipedia(...)` | `search_wikipedia_async(...)` | `GET /v1/wikipedia/all` | Search Wikipedia pages |
@@ -117,6 +118,32 @@ for story in result.results:
     print(f"{story.name} — {story.article_count} articles")
     print(f"Summary: {story.summary}")
 ```
+
+### Story History
+
+```python
+result = api.get_story_history(
+    cluster_id=["911860d569ca464698c0beec0697f694"],
+    var_from="2026-01-01",
+    changelog_exists=True,
+    sort_by="createdAt",
+    size=10,
+)
+
+print(f"Found {result.num_results} history records")
+for record in result.results:
+    print(f"{record.cluster_id} — {record.created_at}")
+    print(f"Summary: {record.short_summary}")
+    if record.changelog:
+        print(f"Changelog: {record.changelog}")
+```
+
+**Key parameters:**
+- `cluster_id` — List of cluster IDs to track specific stories
+- `var_from` / `to` — Date range (ISO strings or datetime objects). Note: `var_from` instead of `from` (Python reserved word).
+- `sort_by` — `"createdAt"` or `"triggeredAt"`
+- `changelog_exists` — Filter by presence of changelog
+- `size` / `page` — Pagination
 
 ### AI Summarization
 

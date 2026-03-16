@@ -41,6 +41,7 @@ const perigon = new V1Api(
 |---|---|---|---|
 | `searchArticles(params)` | GET | `/v1/articles/all` | Search and filter news articles |
 | `searchStories(params)` | GET | `/v1/stories/all` | Search clustered news stories |
+| `getStoryHistory(params)` | GET | `/v1/stories/history` | Get story evolution history |
 | `searchSummarizer(params)` | POST | `/v1/summarize` | AI-powered article summarization |
 | `vectorSearchArticles(params)` | POST | `/v1/vector/news/all` | Semantic vector search over news |
 | `searchWikipedia(params)` | GET | `/v1/wikipedia/all` | Search Wikipedia pages |
@@ -98,6 +99,33 @@ results.forEach((story) => {
   console.log(`Summary: ${story.summary}`);
 });
 ```
+
+### Story History
+
+```ts
+const { results, numResults } = await perigon.getStoryHistory({
+  clusterId: ["911860d569ca464698c0beec0697f694"],
+  from: new Date("2026-01-01"),
+  changelogExists: true,
+  sortBy: "createdAt",
+  size: 10,
+});
+
+results.forEach((record) => {
+  console.log(`${record.clusterId} — ${record.createdAt}`);
+  console.log(`Summary: ${record.shortSummary}`);
+  if (record.changelog) {
+    console.log(`Changelog: ${record.changelog}`);
+  }
+});
+```
+
+**Key parameters:**
+- `clusterId` — Array of cluster IDs to track specific stories
+- `from` / `to` — Date range (Date objects or ISO strings)
+- `sortBy` — `"createdAt"` or `"triggeredAt"`
+- `changelogExists` — Filter by presence of changelog
+- `size` / `page` — Pagination
 
 ### AI Summarization
 

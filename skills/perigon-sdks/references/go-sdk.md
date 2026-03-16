@@ -142,6 +142,10 @@ for _, story := range stories.Results {
 }
 ```
 
+### Story History
+
+The `/v1/stories/history` endpoint is not yet available in the Go SDK. Use the TypeScript or Python SDK, or call the REST API directly.
+
 ### AI Summarization
 
 ```go

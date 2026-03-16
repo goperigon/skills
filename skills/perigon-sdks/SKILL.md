@@ -77,6 +77,7 @@ client := perigon.NewClient(option.WithAPIKey("your-key"))
 |---|---|---|---|
 | `GET /v1/articles/all` | `searchArticles()` | `search_articles()` | `client.All.List()` |
 | `GET /v1/stories/all` | `searchStories()` | `search_stories()` | `client.Stories.List()` |
+| `GET /v1/stories/history` | `getStoryHistory()` | `get_story_history()` | — |
 | `POST /v1/summarize` | `searchSummarizer()` | `search_summarizer()` | `client.Summarize.New()` |
 | `POST /v1/vector/news/all` | `vectorSearchArticles()` | `vector_search_articles()` | `client.Vector.News.Search()` |
 | `GET /v1/wikipedia/all` | `searchWikipedia()` | `search_wikipedia()` | `client.Wikipedia.Search()` |
@@ -110,6 +111,28 @@ result, err := client.All.List(ctx, perigon.AllListParams{
     SortBy: perigon.AllEndpointSortByDate,
 })
 ```
+
+### Story History
+
+**TypeScript:**
+```ts
+const { results } = await perigon.getStoryHistory({
+  clusterId: ["911860d569ca464698c0beec0697f694"],
+  changelogExists: true,
+  size: 10,
+});
+```
+
+**Python:**
+```python
+result = api.get_story_history(
+    cluster_id=["911860d569ca464698c0beec0697f694"],
+    changelog_exists=True,
+    size=10,
+)
+```
+
+**Go:** Not yet available in the Go SDK. Use the REST API directly or the TypeScript/Python SDK.
 
 ### Vector Search
 

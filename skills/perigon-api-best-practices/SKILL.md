@@ -35,6 +35,7 @@ Reference these guidelines when:
 |---|---|---|
 | `/v1/articles/all` | GET | Search and filter news articles with rich parameters |
 | `/v1/stories/all` | GET | Clustered news stories with summaries and metadata |
+| `/v1/stories/history` | GET | Story evolution history with changelogs and snapshots |
 | `/v1/summarize` | POST | AI-powered summarization over matched articles |
 | `/v1/vector/news/all` | POST | Semantic/vector search over news articles |
 | `/v1/wikipedia/all` | GET | Search and filter Wikipedia pages |
@@ -64,6 +65,7 @@ Choose the right endpoint based on the task:
 ```
 Need individual articles? → /v1/articles/all
 Need grouped stories with summaries? → /v1/stories/all
+Need to track how a story evolves over time? → /v1/stories/history
 Need an AI-generated summary of coverage? → /v1/summarize
 Need semantic similarity search for news? → /v1/vector/news/all
 Need Wikipedia knowledge? → /v1/wikipedia/all
@@ -123,6 +125,7 @@ Read individual reference files for detailed endpoint documentation:
 references/authentication.md        — API key setup and security
 references/articles-search.md       — /v1/articles/all deep dive
 references/stories-clustering.md    — /v1/stories/all deep dive
+references/stories-history.md       — /v1/stories/history deep dive
 references/smart-summaries.md       — /v1/summarize deep dive
 references/vector-search.md         — /v1/vector/news/all and /v1/vector/wikipedia/all
 references/wikipedia-knowledge.md   — /v1/wikipedia/all deep dive
